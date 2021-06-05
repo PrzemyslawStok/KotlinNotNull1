@@ -35,6 +35,19 @@ fun main() {
 
     student0 = getStudent(5)?:Student("Domyślny","Student")
     println(student0)
+
+    var text0:String? = "Piotr Stokłosa"
+
+    //if(true)
+    //    text0 = null
+
+    println("Długość tekstu $text0 wynosi: ${text0?.length}")
+
+    text0?.let{
+        val newText = it.replace("Piotr","Przemysław",true)
+        println(newText)
+    }
+
 }
 
 fun div(x: Double, y: Double):Double?{
