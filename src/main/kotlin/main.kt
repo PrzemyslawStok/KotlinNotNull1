@@ -48,6 +48,39 @@ fun main() {
         println(newText)
     }
 
+    println(parseDouble("10.0"))
+    val number: Double = parseDouble("10.0")
+
+    println("sumaWynosi ${add(null,10.0)}")
+
+}
+
+//Zad. 1 Proszę napisać funkcję, która pobiera ciąg znaków i
+// zwraca liczbę double, która jest zdefiniowana
+// jeżeli parametru nie da się odczytać zwaracamy 0
+
+fun parseDouble(text: String?):Double{
+    //val textNumber:String = "2342342334.0"
+    //val number = textNumber.toDoubleOrNull()
+
+    val number0:Double? = text?.toDoubleOrNull()
+
+    /*
+    //Metoda 1
+    if(number0!=null)
+        return number0
+    else
+        return 0.0*/
+
+    number0?.let{
+        return it
+    }
+
+    return 0.0
+}
+
+fun parseDouble1(text: String):Double{
+    return text.toDoubleOrNull()?:0.0
 }
 
 fun div(x: Double, y: Double):Double?{
@@ -66,4 +99,8 @@ fun getStudent(id: Int):Student?{
         return Student("Przemysław","Stokłosa_$id")
     else
         return null
+}
+
+fun add(x:Double?, y: Double?):Double{
+    return 0.0
 }
