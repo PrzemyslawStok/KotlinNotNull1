@@ -102,5 +102,7 @@ fun getStudent(id: Int):Student?{
 }
 
 fun add(x:Double?, y: Double?):Double{
+    val x1: Double = x?:0.0
+
     return 0.0
 }
