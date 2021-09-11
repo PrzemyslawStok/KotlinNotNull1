@@ -4,18 +4,24 @@ fun main(){
 
     i = add(2,10)?:0
 
-    j = add(2,10)
+    j = add(20,10)
+
+    j?.let{
+        i = it
+    }
 
     if(j!=null)
         i = j
     else
         i = 0
 
-    i = add(20,10)!!
-}
+    //i = add(2,10)!!
 
-fun zadania1(){
+    add(20,10)?.let{
+        i = it
+    }
 
+    print(i)
 }
 
 fun add(a: Int, b: Int):Int?{
