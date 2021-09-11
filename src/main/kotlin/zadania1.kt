@@ -1,15 +1,17 @@
-class zadania1 {
-}
-
 fun main(){
     var i:Int = 10
     var j:Int? = 10
 
-    i = add(2,10)
+    i = add(2,10)?:0
+
     j = add(2,10)
 
-    j = null
+    if(j!=null)
+        i = j
+    else
+        i = 0
 
+    i = add(2,10)!!
 }
 
 fun add(a: Int, b: Int):Int?{
