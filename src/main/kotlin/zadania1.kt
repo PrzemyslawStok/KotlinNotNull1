@@ -11,7 +11,11 @@ fun main(){
     else
         i = 0
 
-    i = add(2,10)!!
+    i = add(20,10)!!
+}
+
+fun zadania1(){
+
 }
 
 fun add(a: Int, b: Int):Int?{
