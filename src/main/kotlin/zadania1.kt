@@ -10,6 +10,12 @@ fun main(){
         i = it
     }
 
+    var text:String? = null
+
+    text?.let{
+        print(it)
+    }
+
     if(j!=null)
         i = j
     else
@@ -19,6 +25,8 @@ fun main(){
 
     add(20,10)?.let{
         i = it
+    }.also {
+        println("Pojawił się błąd w obliczeniach.")
     }
 
     print(i)
